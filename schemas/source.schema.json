@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/SemperSupra/au-public-data/schemas/source.schema.json",
+  "title": "AU Public Data Source",
+  "type": "object",
+  "required": ["id", "name", "publisher", "authority_tier", "url", "source_type", "enabled"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9-]*$"
+    },
+    "name": {"type": "string", "minLength": 1},
+    "publisher": {"type": "string", "minLength": 1},
+    "authority_tier": {"type": "integer", "minimum": 1, "maximum": 4},
+    "url": {"type": "string", "format": "uri"},
+    "source_type": {
+      "enum": ["html", "pdf", "json", "xml", "rss", "atom", "ics", "other"]
+    },
+    "enabled": {"type": "boolean"},
+    "scope": {"type": "string"},
+    "notes": {"type": "string"}
+  },
+  "additionalProperties": false
+}
