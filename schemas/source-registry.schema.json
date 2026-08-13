@@ -1,6 +1,5 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://github.com/SemperSupra/au-public-data/schemas/source-registry.schema.json",
   "title": "AU Public Data Source Registry",
   "type": "object",
   "required": ["schema_version", "sources"],
