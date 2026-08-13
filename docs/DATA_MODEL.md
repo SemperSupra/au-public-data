@@ -61,7 +61,7 @@ The project should not infer a deadline time merely because a date is known.
 
 ## Source registry
 
-`sources/registry.json` is the public declarative inventory of sources approved for collection work. The initial bootstrap leaves it empty until individual sources are verified and documented.
+`sources/registry.json` is the public declarative source inventory. Verified source candidates and their current status are documented in `docs/SOURCE_VERIFICATION.md`. Registry entries are added separately from source verification, and source-specific implementation remains a follow-on step.
 
 Each source record captures authority tier and public source identity. Collector-specific implementation belongs outside the registry schema.
 
