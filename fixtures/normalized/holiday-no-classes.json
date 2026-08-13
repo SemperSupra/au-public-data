@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "id": "fixture-holiday-no-classes",
+  "record_type": "event",
+  "title": "Synthetic University Holiday",
+  "fact_status": "explicit",
+  "source_status": "tentative",
+  "validation_status": "validated",
+  "categories": ["holiday"],
+  "impacts": ["no-classes"],
+  "audience": ["university-community"],
+  "temporal": {
+    "status": "known",
+    "precision": "date",
+    "start_date": "2030-01-02",
+    "end_date": "2030-01-02",
+    "timezone": "Asia/Bangkok"
+  },
+  "provenance": {
+    "source_id": "fixture-source",
+    "retrieved_at": "2030-01-01T00:00:00Z",
+    "evidence_refs": ["fixture:holiday-no-classes"]
+  }
+}
