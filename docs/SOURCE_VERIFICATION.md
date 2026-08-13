@@ -94,6 +94,14 @@ The current VMES site exposes a News & Events section and latest school news.
 
 The current Student Life page explicitly points current students to faculty information and an Academic Milestone Checklist.
 
+## Deferred source candidates
+
+### Student Affairs / Career Development
+
+Current AU event and news pages identify Student Affairs and the Center for Career Development & Counseling as organizers of student-life and career activities and point to `https://sa.au.edu/`. The main AU event calendar already carries examples such as Career Week and Club Week.
+
+A separate Student Affairs/CCDC registry source is deferred until a stable public listing surface can be directly verified for deterministic collection. Do not duplicate the same events from the main AU event source merely because organizer pages exist.
+
 ## Registry promotion
 
 These seven sources are ready to become the initial entries in `sources/registry.json` with `enabled: false`. They remain disabled until source-specific collection/parsing is reviewed separately.
