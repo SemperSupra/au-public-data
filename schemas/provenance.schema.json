@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "AU Public Data Provenance",
+  "type": "object",
+  "required": ["source_id", "retrieved_at"],
+  "properties": {
+    "source_id": {"type": "string", "minLength": 1},
+    "source_artifact_id": {"type": "string"},
+    "source_url": {"type": "string", "format": "uri"},
+    "retrieved_at": {"type": "string", "format": "date-time"},
+    "source_as_of": {"type": "string", "format": "date"},
+    "source_sha256": {"type": "string", "pattern": "^[A-Fa-f0-9]{64}$"},
+    "evidence_refs": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+    "derived_from": {"type": "array", "items": {"type": "string"}, "uniqueItems": true}
+  },
+  "additionalProperties": false
+}
