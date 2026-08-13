@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "id": "fixture-tba-item",
+  "record_type": "event",
+  "title": "Synthetic TBA Event",
+  "fact_status": "explicit",
+  "validation_status": "validated",
+  "categories": ["ceremony"],
+  "impacts": [],
+  "audience": ["university-community"],
+  "temporal": {"status": "tba"},
+  "provenance": {
+    "source_id": "fixture-source",
+    "retrieved_at": "2030-01-01T00:00:00Z",
+    "evidence_refs": ["fixture:tba-item"]
+  }
+}
