@@ -30,6 +30,18 @@ The public page identifies itself as the Office of the University Registrar and 
 
 The current public listing includes 2026 registration, adding/withdrawal, examination, student-ID, scholarship, and other Registrar notices.
 
+### Registrar academic rules and regulations
+
+- Stable ID: `registrar-academic-rules`
+- Publisher: Office of the University Registrar, Assumption University
+- URL: `https://registrar.au.edu/academic-rules-regulation/`
+- Source type: HTML rules index
+- Authority: Tier 1
+- Scope: public academic rules and regulations including prerequisites, course-load limits, examinations, and related academic policies
+- Collection status: disabled pending collector/parser review
+
+The public rules index currently links Registrar-controlled rule material and is appropriate as the authoritative discovery surface for rule normalization.
+
 ## Tier 2 — Main Assumption University site
 
 ### Assumption University events
@@ -46,10 +58,12 @@ The current public event calendar exposes list/month/day views and current 2026 
 
 ## Registry promotion
 
-These three sources are ready to become the first entries in `sources/registry.json` with `enabled: false`. They remain disabled until source-specific collection/parsing is reviewed separately.
+These four sources are ready to become the first entries in `sources/registry.json` with `enabled: false`. They remain disabled until source-specific collection/parsing is reviewed separately.
 
 Registry promotion is pending only because the GitHub mutation layer rejected the registry rewrite during this bootstrap session; the source verification itself is complete.
 
-## Follow-up research
+## Machine-readable endpoint status
 
-Do not infer machine-readable endpoints from the site technology. Before implementing collectors, separately verify whether any of these sources exposes a stable public RSS/Atom/ICS/JSON/XML endpoint and prefer that over HTML scraping when available.
+No stable public RSS, Atom, ICS, JSON, or XML endpoint has yet been verified for these four sources. Do not infer one from apparent site technology or URL conventions.
+
+Before implementing collectors, separately verify whether a native machine-readable endpoint exists and prefer it over HTML scraping when available.
