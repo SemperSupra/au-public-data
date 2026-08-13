@@ -104,9 +104,7 @@ A separate Student Affairs/CCDC registry source is deferred until a stable publi
 
 ## Registry promotion
 
-These seven sources are ready to become the initial entries in `sources/registry.json` with `enabled: false`. They remain disabled until source-specific collection/parsing is reviewed separately.
-
-Registry promotion is pending only because the GitHub mutation layer rejected the registry rewrite during this bootstrap session; the source verification itself is complete.
+The seven verified sources are now present in `sources/registry.json` with `enabled: false`. Source verification and registry promotion are complete; source-specific collection/parsing remains a separate review gate.
 
 ## Machine-readable endpoint status
 
