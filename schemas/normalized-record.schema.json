@@ -2,18 +2,23 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "AU Public Data Normalized Record",
   "type": "object",
-  "required": ["schema_version", "id", "record_type", "title", "fact_status", "source_id", "retrieved_at"],
+  "required": ["schema_version", "id", "record_type", "title", "fact_status", "temporal", "provenance"],
   "properties": {
     "schema_version": {"const": 1},
     "id": {"type": "string", "minLength": 1},
     "record_type": {"type": "string", "minLength": 1},
     "title": {"type": "string", "minLength": 1},
+    "source_title": {"type": "string"},
     "summary": {"type": "string"},
     "fact_status": {"enum": ["explicit", "derived", "candidate"]},
-    "source_id": {"type": "string", "minLength": 1},
-    "retrieved_at": {"type": "string", "format": "date-time"},
-    "timezone": {"type": "string"},
-    "tags": {"type": "array", "items": {"type": "string"}, "uniqueItems": true}
+    "source_status": {"type": "string"},
+    "validation_status": {"enum": ["candidate", "validated", "rejected"]},
+    "categories": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+    "impacts": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+    "audience": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+    "temporal": {"$ref": "temporal.schema.json"},
+    "applicability": {"$ref": "applicability.schema.json"},
+    "provenance": {"$ref": "provenance.schema.json"}
   },
   "additionalProperties": true
 }
