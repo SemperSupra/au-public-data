@@ -16,7 +16,7 @@ This document records the first bounded set of public first-party Assumption Uni
 - Scope: official semester calendars, admissions calendar material, academic-year calendar, and university public-holiday calendar links
 - Collection status: disabled pending collector/parser review
 
-The public page identifies itself as the Office of the University Registrar and currently presents Semester 1/2026, Calendar Academic Year 2026, admissions calendars, and university public-holiday calendar material.
+The public page currently presents Semester 1/2026, Semester 2/2026, Calendar Academic Year 2026, admissions calendars, and university public-holiday calendar material. The current semester/year calendars are embedded as separate public Google Drive PDF artifacts.
 
 ### Registrar announcements
 
@@ -40,7 +40,7 @@ The current public listing includes 2026 registration, adding/withdrawal, examin
 - Scope: public academic rules and regulations including prerequisites, course-load limits, examinations, and related academic policies
 - Collection status: disabled pending collector/parser review
 
-The public rules index currently links Registrar-controlled rule material and is appropriate as the authoritative discovery surface for rule normalization.
+The public rules index is the authoritative discovery surface for Registrar-controlled academic rule material.
 
 ## Tier 2 — Main Assumption University site
 
@@ -56,14 +56,52 @@ The public rules index currently links Registrar-controlled rule material and is
 
 The current public event calendar exposes list/month/day views and current 2026 university events.
 
+## Tier 3 — School and office sources
+
+### Office of International Affairs / AU Study Abroad
+
+- Stable ID: `oia-study-abroad`
+- Publisher: Office of International Affairs, Assumption University
+- URL: `https://oia.au.edu/`
+- Source type: HTML site
+- Authority: Tier 3
+- Scope: public exchange, study-abroad, short-program, international internship, scholarship/opportunity, and OIA event information
+- Collection status: disabled pending collector/parser review
+
+OIA identifies itself and the AU Study Abroad Centre as internal Assumption University units serving inbound/outbound mobility and global opportunities.
+
+### VMES news and events
+
+- Stable ID: `vmes-news-events`
+- Publisher: Vincent Mary School of Engineering, Science and Technology, Assumption University
+- URL: `https://vmes.au.edu/`
+- Source type: HTML site/news surface
+- Authority: Tier 3
+- Scope: VMES public news, events, school activities, program-related opportunities, and announcements relevant to Engineering/Science/Technology students
+- Collection status: disabled pending collector/parser review
+
+The current VMES site exposes a News & Events section and latest school news.
+
+### VMES current-student information
+
+- Stable ID: `vmes-student-life`
+- Publisher: Vincent Mary School of Engineering, Science and Technology, Assumption University
+- URL: `https://vmes.au.edu/student-life/`
+- Source type: HTML current-student index
+- Authority: Tier 3
+- Scope: public current-student information, including school academic milestone/checklist material and related student links
+- Collection status: disabled pending collector/parser review
+
+The current Student Life page explicitly points current students to faculty information and an Academic Milestone Checklist.
+
 ## Registry promotion
 
-These four sources are ready to become the first entries in `sources/registry.json` with `enabled: false`. They remain disabled until source-specific collection/parsing is reviewed separately.
+These seven sources are ready to become the initial entries in `sources/registry.json` with `enabled: false`. They remain disabled until source-specific collection/parsing is reviewed separately.
 
 Registry promotion is pending only because the GitHub mutation layer rejected the registry rewrite during this bootstrap session; the source verification itself is complete.
 
 ## Machine-readable endpoint status
 
-No stable public RSS, Atom, ICS, JSON, or XML endpoint has yet been verified for these four sources. Do not infer one from apparent site technology or URL conventions.
+No stable public RSS, Atom, ICS, JSON, or XML endpoint has yet been verified for these seven sources. Do not infer one from apparent site technology or URL conventions.
 
 Before implementing collectors, separately verify whether a native machine-readable endpoint exists and prefer it over HTML scraping when available.
