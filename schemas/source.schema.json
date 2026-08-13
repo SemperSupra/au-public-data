@@ -1,6 +1,5 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://github.com/SemperSupra/au-public-data/schemas/source.schema.json",
   "title": "AU Public Data Source",
   "type": "object",
   "required": ["id", "name", "publisher", "authority_tier", "url", "source_type", "enabled"],
