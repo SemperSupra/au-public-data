@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "id": "fixture-exam-window",
+  "record_type": "event",
+  "title": "Synthetic Examination Period",
+  "fact_status": "explicit",
+  "source_status": "tentative",
+  "validation_status": "validated",
+  "categories": ["examination"],
+  "impacts": [],
+  "audience": ["undergraduate-students"],
+  "temporal": {
+    "status": "known",
+    "precision": "date",
+    "start_date": "2030-03-10",
+    "end_date": "2030-03-20",
+    "timezone": "Asia/Bangkok"
+  },
+  "applicability": {
+    "scope": "individual-schedule-dependent",
+    "verification_required": true,
+    "verification_source": "authenticated student schedule"
+  },
+  "provenance": {
+    "source_id": "fixture-source",
+    "retrieved_at": "2030-01-01T00:00:00Z",
+    "evidence_refs": ["fixture:exam-window"]
+  }
+}

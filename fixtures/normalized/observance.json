@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "id": "fixture-observance",
+  "record_type": "event",
+  "title": "Synthetic Observance",
+  "fact_status": "explicit",
+  "source_status": "tentative",
+  "validation_status": "validated",
+  "categories": ["observance"],
+  "impacts": [],
+  "audience": ["university-community"],
+  "temporal": {
+    "status": "known",
+    "precision": "date",
+    "start_date": "2030-02-03",
+    "end_date": "2030-02-03",
+    "timezone": "Asia/Bangkok"
+  },
+  "provenance": {
+    "source_id": "fixture-source",
+    "retrieved_at": "2030-01-01T00:00:00Z",
+    "evidence_refs": ["fixture:observance"]
+  }
+}

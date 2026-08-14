@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "AU Public Data Applicability",
+  "type": "object",
+  "properties": {
+    "scope": {"type": "string"},
+    "verification_required": {"type": "boolean"},
+    "verification_source": {"type": "string"}
+  },
+  "additionalProperties": false
+}

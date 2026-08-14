@@ -1,0 +1,82 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "id": "registrar-academic-calendar",
+      "name": "Registrar academic calendar",
+      "publisher": "Office of the University Registrar, Assumption University",
+      "authority_tier": 1,
+      "url": "https://registrar.au.edu/academic-calendar/",
+      "source_type": "html",
+      "enabled": false,
+      "cadence_class": "normal_operational",
+      "scope": "Official semester calendars, admissions calendar material, academic-year calendar, and university public-holiday calendar links."
+    },
+    {
+      "id": "registrar-announcements",
+      "name": "Registrar announcements",
+      "publisher": "Office of the University Registrar, Assumption University",
+      "authority_tier": 1,
+      "url": "https://registrar.au.edu/news-cats/all-announcement/",
+      "source_type": "html",
+      "enabled": false,
+      "cadence_class": "urgent_operational",
+      "scope": "Official Registrar announcements and student-administration schedules and notices."
+    },
+    {
+      "id": "registrar-academic-rules",
+      "name": "Registrar academic rules and regulations",
+      "publisher": "Office of the University Registrar, Assumption University",
+      "authority_tier": 1,
+      "url": "https://registrar.au.edu/academic-rules-regulation/",
+      "source_type": "html",
+      "enabled": false,
+      "cadence_class": "slow_academic",
+      "scope": "Public academic rules and regulations including prerequisites, course-load limits, examinations, and related academic policies."
+    },
+    {
+      "id": "au-events",
+      "name": "Assumption University events",
+      "publisher": "Assumption University of Thailand",
+      "authority_tier": 2,
+      "url": "https://www.au.edu/event/",
+      "source_type": "html",
+      "enabled": false,
+      "cadence_class": "normal_operational",
+      "scope": "University-wide public event dates, times, locations, and descriptions."
+    },
+    {
+      "id": "oia-study-abroad",
+      "name": "Office of International Affairs / AU Study Abroad",
+      "publisher": "Office of International Affairs, Assumption University",
+      "authority_tier": 3,
+      "url": "https://oia.au.edu/",
+      "source_type": "html",
+      "enabled": false,
+      "cadence_class": "normal_operational",
+      "scope": "Public exchange, study-abroad, short-program, international internship, scholarship/opportunity, and OIA event information."
+    },
+    {
+      "id": "vmes-news-events",
+      "name": "VMES news and events",
+      "publisher": "Vincent Mary School of Engineering, Science and Technology, Assumption University",
+      "authority_tier": 3,
+      "url": "https://vmes.au.edu/",
+      "source_type": "html",
+      "enabled": false,
+      "cadence_class": "normal_operational",
+      "scope": "VMES public news, events, school activities, program-related opportunities, and announcements relevant to Engineering/Science/Technology students."
+    },
+    {
+      "id": "vmes-student-life",
+      "name": "VMES current-student information",
+      "publisher": "Vincent Mary School of Engineering, Science and Technology, Assumption University",
+      "authority_tier": 3,
+      "url": "https://vmes.au.edu/student-life/",
+      "source_type": "html",
+      "enabled": false,
+      "cadence_class": "slow_academic",
+      "scope": "Public current-student information including school academic milestone/checklist material and related student links."
+    }
+  ]
+}
