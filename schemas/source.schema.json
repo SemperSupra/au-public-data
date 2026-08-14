@@ -16,6 +16,9 @@
       "enum": ["html", "pdf", "json", "xml", "rss", "atom", "ics", "other"]
     },
     "enabled": {"type": "boolean"},
+    "cadence_class": {
+      "enum": ["urgent_operational", "normal_operational", "slow_academic", "external_reference", "historical"]
+    },
     "scope": {"type": "string"},
     "notes": {"type": "string"}
   },
