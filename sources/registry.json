@@ -9,6 +9,7 @@
       "url": "https://registrar.au.edu/academic-calendar/",
       "source_type": "html",
       "enabled": false,
+      "cadence_class": "normal_operational",
       "scope": "Official semester calendars, admissions calendar material, academic-year calendar, and university public-holiday calendar links."
     },
     {
@@ -19,6 +20,7 @@
       "url": "https://registrar.au.edu/news-cats/all-announcement/",
       "source_type": "html",
       "enabled": false,
+      "cadence_class": "urgent_operational",
       "scope": "Official Registrar announcements and student-administration schedules and notices."
     },
     {
@@ -29,6 +31,7 @@
       "url": "https://registrar.au.edu/academic-rules-regulation/",
       "source_type": "html",
       "enabled": false,
+      "cadence_class": "slow_academic",
       "scope": "Public academic rules and regulations including prerequisites, course-load limits, examinations, and related academic policies."
     },
     {
@@ -39,6 +42,7 @@
       "url": "https://www.au.edu/event/",
       "source_type": "html",
       "enabled": false,
+      "cadence_class": "normal_operational",
       "scope": "University-wide public event dates, times, locations, and descriptions."
     },
     {
@@ -49,6 +53,7 @@
       "url": "https://oia.au.edu/",
       "source_type": "html",
       "enabled": false,
+      "cadence_class": "normal_operational",
       "scope": "Public exchange, study-abroad, short-program, international internship, scholarship/opportunity, and OIA event information."
     },
     {
@@ -59,6 +64,7 @@
       "url": "https://vmes.au.edu/",
       "source_type": "html",
       "enabled": false,
+      "cadence_class": "normal_operational",
       "scope": "VMES public news, events, school activities, program-related opportunities, and announcements relevant to Engineering/Science/Technology students."
     },
     {
@@ -69,6 +75,7 @@
       "url": "https://vmes.au.edu/student-life/",
       "source_type": "html",
       "enabled": false,
+      "cadence_class": "slow_academic",
       "scope": "Public current-student information including school academic milestone/checklist material and related student links."
     }
   ]
