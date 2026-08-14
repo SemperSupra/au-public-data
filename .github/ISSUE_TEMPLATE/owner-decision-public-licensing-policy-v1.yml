@@ -10,7 +10,7 @@ body:
         Decision ID: `public-licensing-policy`
         Version: `1`
 
-        This decision gates public promotion of substantive AU Public Data collector work. Nothing below is preselected. Recommended choices are guidance only.
+        This public form is the canonical browser submission surface for this public-project policy decision. Nothing below is preselected. Recommended choices are guidance only.
 
         Related work:
         - `SemperSupra/au-public-data#2`
