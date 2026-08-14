@@ -14,7 +14,9 @@ body:
 
         **Prospective-only means this decision can be revisited for future releases, but a later change does not silently revoke permissions already granted or undo artifacts already published under an earlier policy.**
 
-        Nothing below is preselected. Recommendations are advisory and are justified with primary-source evidence. `defer` remains a valid choice when a material question is unresolved.
+        Nothing below is preselected by this template. Recommendations are advisory and are justified with primary-source evidence. `defer` remains a valid choice when a material question is unresolved.
+
+        **Browser-state warning:** GitHub or the browser may restore values from an earlier unsubmitted form. If any choice is already filled when this form opens, treat it as restored browser state, not as a project default, recommendation selection, or owner approval. Review every selection deliberately before submitting.
 
         Related work:
         - `SemperSupra/au-public-data#2`
@@ -45,7 +47,7 @@ body:
     id: software_license
     attributes:
       label: "[software_license] Project-original public software license"
-      description: "Choose deliberately; the recommendation above is not preselected."
+      description: "Choose deliberately; the recommendation above is not preselected by the template."
       options:
         - "apache-2.0 — Apache-2.0 — RECOMMENDED"
         - "mit — MIT — acceptable alternative"
@@ -84,7 +86,7 @@ body:
     id: generated_data_policy
     attributes:
       label: "[generated_data_policy] Project-owned generated-data policy"
-      description: "Choose deliberately; the recommendation above is not preselected."
+      description: "Choose deliberately; the recommendation above is not preselected by the template."
       options:
         - "cc0-1.0 — CC0-1.0 — RECOMMENDED"
         - "pddl-1.0 — ODC PDDL-1.0 — acceptable alternative"
@@ -119,7 +121,7 @@ body:
     id: source_artifact_policy
     attributes:
       label: "[source_artifact_policy] Default redistribution posture for third-party AU source artifacts"
-      description: "Choose deliberately; the recommendation above is not preselected."
+      description: "Choose deliberately; the recommendation above is not preselected by the template."
       options:
         - "links-provenance-by-default — Links/provenance by default — RECOMMENDED"
         - "source-by-source — Always decide source by source — stricter alternative"
