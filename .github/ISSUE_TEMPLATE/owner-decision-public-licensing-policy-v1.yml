@@ -7,49 +7,123 @@ body:
       value: |
         ## AU Public Data licensing and redistribution policy
 
-        Decision ID: `public-licensing-policy`
-        Version: `1`
+        Decision ID: `public-licensing-policy`  
+        Decision version: `1`  
+        Governance: **single owner**  
+        Lifecycle: **prospective-only, repeatable**
 
-        This public form is the canonical browser submission surface for this public-project policy decision. Nothing below is preselected. Recommended choices are guidance only.
+        **Prospective-only means this decision can be revisited for future releases, but a later change does not silently revoke permissions already granted or undo artifacts already published under an earlier policy.**
+
+        Nothing below is preselected. Recommendations are advisory and are justified with primary-source evidence. `defer` remains a valid choice when a material question is unresolved.
 
         Related work:
         - `SemperSupra/au-public-data#2`
         - `SemperSupra/surge-halo-private#24`
 
+  - type: markdown
+    attributes:
+      value: |
+        ### 1. Project-original public software license
+
+        **Recommended — `apache-2.0` / Apache-2.0**
+        - **Implication:** future project-original software releases use Apache-2.0 unless a later prospective decision changes that.
+        - **Benefits:** explicit patent and contribution terms; well established for long-lived collaborative open-source projects.
+        - **Costs/risks:** longer than MIT and may require modest NOTICE bookkeeping where notices apply.
+        - **Why recommended:** the extra patent/contribution clarity is useful for a project intended to accept continued collaboration; Apache's own license history explicitly describes the trade of some brevity for clearer patent/contribution coverage.
+        - **Evidence:** [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0) · [Apache-2.0 license history](https://www.apache.org/licenses/license-history.html)
+
+        **Acceptable alternative — `mit` / MIT**
+        - **Implication:** future project-original software releases use MIT.
+        - **Benefits:** extremely short, familiar, permissive, and low-friction.
+        - **Costs/risks:** does not provide Apache-2.0's explicit patent-license framework or the same contribution detail.
+        - **When to prefer it:** when minimal license/compliance text is more important than explicit patent/contribution terms.
+        - **Evidence:** [OSI MIT License](https://opensource.org/license/mit)
+
+        **`defer`** keeps substantive public software promotion blocked while a concrete unresolved ownership/patent/contribution question is investigated.
+
   - type: dropdown
     id: software_license
     attributes:
       label: "[software_license] Project-original public software license"
-      description: "Recommended: apache-2.0 — explicit patent/contribution terms and a good fit for a long-lived collaborative open-source tool."
+      description: "Choose deliberately; the recommendation above is not preselected."
       options:
-        - "apache-2.0 — Apache-2.0"
-        - "mit — MIT"
+        - "apache-2.0 — Apache-2.0 — RECOMMENDED"
+        - "mit — MIT — acceptable alternative"
         - "defer — Defer this decision"
     validations:
       required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        ### 2. Project-owned generated-data policy
+
+        This applies only **to the extent the project owns rights it can dedicate or license**. It does not acquire rights in third-party AU content merely by normalizing or referencing it.
+
+        **Recommended — `cc0-1.0` / CC0-1.0**
+        - **Implication:** project-owned normalized facts/metadata are offered for very broad reuse; no attribution/share-alike requirement is imposed by CC0 itself.
+        - **Benefits:** very low downstream friction; CC0 expressly addresses copyright and related rights including database rights.
+        - **Costs/risks:** no enforceable attribution or reciprocity requirement; it cannot waive rights the project does not own; the dedication is intended to be permanent for material already released.
+        - **Why recommended:** broad machine/human reuse is a primary goal, while provenance can remain an operational/data-quality requirement instead of a license condition.
+        - **Evidence:** [CC0 1.0 legal code](https://creativecommons.org/publicdomain/zero/1.0/legalcode.en)
+
+        **Acceptable alternative — `pddl-1.0` / ODC PDDL-1.0**
+        - Database-specific public-domain dedication with similarly low downstream restrictions.
+        - Prefer it if a database-specific legal tool is deliberately desired rather than the broader CC0 mechanism.
+        - **Evidence:** [Open Data Commons PDDL 1.0](https://opendatacommons.org/licenses/pddl/1-0/index.html)
+
+        **Acceptable when reciprocity is a goal — `odbl-1.0` / ODbL-1.0**
+        - **Benefits:** attribution/share-alike preserve reciprocal openness for adapted databases.
+        - **Costs/risks:** more downstream compliance friction and compatibility considerations.
+        - Not recommended under the current goal of broad low-friction reuse, but appropriate if reciprocity becomes an explicit requirement.
+        - **Evidence:** [Open Data Commons ODbL 1.0](https://opendatacommons.org/licenses/odbl/1-0/)
+
+        **`defer`** delays affected public data publication while rights/reciprocity requirements are clarified.
 
   - type: dropdown
     id: generated_data_policy
     attributes:
       label: "[generated_data_policy] Project-owned generated-data policy"
-      description: "Recommended: cc0-1.0 — broad reuse of project-owned factual normalization/metadata, to the extent the project has rights to dedicate it."
+      description: "Choose deliberately; the recommendation above is not preselected."
       options:
-        - "cc0-1.0 — CC0-1.0"
-        - "pddl-1.0 — ODC PDDL-1.0"
-        - "odbl-1.0 — ODbL-1.0"
+        - "cc0-1.0 — CC0-1.0 — RECOMMENDED"
+        - "pddl-1.0 — ODC PDDL-1.0 — acceptable alternative"
+        - "odbl-1.0 — ODbL-1.0 — choose if reciprocity is desired"
         - "defer — Defer this decision"
     validations:
       required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        ### 3. Third-party AU source-artifact redistribution
+
+        **Recommended — `links-provenance-by-default`**
+        - **Implication:** public outputs default to source URLs, hashes, provenance, and normalized facts; actual third-party PDFs/pages/images/documents are republished only after source-specific review supports it.
+        - **Benefits:** keeps strong traceability while avoiding the assumption that public web access equals permission to reproduce/distribute protected expression.
+        - **Costs/risks:** external source links can disappear/change and users may need to retrieve originals separately.
+        - **Why recommended:** copyright guidance distinguishes unprotected facts from potentially protected expression and treats reproduction/distribution as rights normally controlled by the copyright owner, subject to permissions/exceptions.
+        - **Evidence:** [U.S. Copyright Office — What is Copyright?](https://www.copyright.gov/what-is-copyright/)
+
+        **Acceptable stricter alternative — `source-by-source`**
+        - Requires explicit review for every source family before republication.
+        - Lower rights risk, but higher administrative cost and slower collector/publication throughput.
+
+        **Not recommended — `publicly-accessible-by-default`**
+        - Fastest preservation/republication path.
+        - Public availability does **not** itself establish redistribution permission, so this creates avoidable rights/compliance risk.
+
+        **`defer`** keeps automatic source-artifact republication blocked while allowing discovery, hashing, and provenance work that is otherwise permitted.
 
   - type: dropdown
     id: source_artifact_policy
     attributes:
       label: "[source_artifact_policy] Default redistribution posture for third-party AU source artifacts"
-      description: "Recommended: links-provenance-by-default — publish links, hashes, provenance, and normalized facts by default; redistribute source artifacts only after source-specific review."
+      description: "Choose deliberately; the recommendation above is not preselected."
       options:
-        - "links-provenance-by-default — Links/provenance by default"
-        - "source-by-source — Always decide source by source"
-        - "publicly-accessible-by-default — Republish publicly accessible artifacts by default"
+        - "links-provenance-by-default — Links/provenance by default — RECOMMENDED"
+        - "source-by-source — Always decide source by source — stricter alternative"
+        - "publicly-accessible-by-default — Republish publicly accessible artifacts by default — NOT RECOMMENDED"
         - "defer — Defer this decision"
     validations:
       required: true
@@ -57,15 +131,17 @@ body:
   - type: textarea
     id: rationale
     attributes:
-      label: "[rationale] Optional rationale or constraints"
-      description: "Add anything future agents should preserve when implementing the selected policy. Leave blank if the structured choices are sufficient."
+      label: "[rationale] Optional rationale, constraints, or evidence"
+      description: "Add anything future agents should preserve when implementing the selections, including contrary evidence or a reason for choosing a non-recommended option."
       placeholder: "Optional notes"
 
   - type: checkboxes
     id: confirmation
     attributes:
       label: "[confirmation] Confirmation"
-      description: "This acknowledgement is provenance only; the normalization step will independently validate all required answers."
+      description: "This acknowledgement is provenance only; normalization will independently validate the structured answers."
       options:
+        - label: "I understand this is a prospective-only decision: it may be revisited for future releases, but prior grants/publications are not silently revoked."
+          required: true
         - label: "I intend these selections to be the owner decision for public-licensing-policy v1."
           required: true
